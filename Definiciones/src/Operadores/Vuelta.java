@@ -55,6 +55,16 @@ public class Vuelta {
 		}
 		System.out.println();
 		System.out.println(salida5);
+		
+		//Como el ejercicio anterior pero sin calcular la longitud del String
+		salida += (char) 0;
+		int post = 0;
+		String salida6 = "";
+		while (salida.charAt(post) != (char) 0)
+				salida6 = salida.charAt(post++) + salida;
+		
+		System.out.println(salida6);
+		
 	}
 
 	public static char conver(char cambio) {
