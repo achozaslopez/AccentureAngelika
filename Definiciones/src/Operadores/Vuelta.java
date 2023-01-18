@@ -61,7 +61,7 @@ public class Vuelta {
 		int post = 0;
 		String salida6 = "";
 		while (salida.charAt(post) != (char) 0)
-				salida6 = salida.charAt(post++) + salida;
+				salida6 = salida.charAt(post++) + salida6;
 		
 		System.out.println(salida6);
 		
