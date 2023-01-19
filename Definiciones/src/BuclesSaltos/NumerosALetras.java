@@ -4,8 +4,8 @@ public class NumerosALetras {
 
 	public static void main(String[] args) {
 		int n = 72;
-		int unidades = n % 10;
-		int decenas = n / 10;
+		int unidades = n % 10; //Resto division
+		int decenas = n / 10; //Cociente division
 		
 		switch(decenas) {
 		case 0:
