@@ -1,0 +1,5 @@
+/bin/
+/.metradata/
+org.eclipse.*
+.project
+.classpath
