@@ -11,25 +11,35 @@ public class FechaV2 {
 	 * @return 
 	 */
 	
+	
+	
 	public static String comprobarFecha(int dia, int mes, int anio) {
-		
+		/**
+		 * Debido a un error en el Sonar de complejidad ciclomatica he creado diferentes
+		 * metodos para reducirla
+		 */
 		String resultado = "";
 		boolean anioCorrecto = comprobarAnio(anio);
 		boolean diaCorrecto = comprobarDia(dia);
+		
+		/*
+		 * Compruebo si es año es correcto y si el dia es correcto si alguno de ellos 
+		 * es incorrecto no entra en el bloque switch
+		*/
 		
 		if (anioCorrecto) {
 			if (diaCorrecto) {
 				boolean diasMesCorrectos = comprobarDiasMes(dia,mes);
 				if (diasMesCorrectos) {
-					resultado = "La fecha es correcta";
+					resultado = "La fecha es correcta"; //Se imprime si la fecha es correcta
 				} else {
-					resultado = "El mes es incorrecto";
+					resultado = "El mes es incorrecto"; //Se imprime si el mes es incorrecto
 				}
 			} else {
-				resultado = "El día es incorrecto";	
+				resultado = "El día es incorrecto";	//Se imprime si el día es incorrecto
 			}
 		} else {
-			resultado = "El año es incorrecto";
+			resultado = "El año es incorrecto"; //Se imprime si el año no es correcto
 		}
 
 		return resultado;
@@ -38,7 +48,11 @@ public class FechaV2 {
 	public static boolean comprobarDiasMes (int dia, int mes) {
 		boolean diasCorrespondientes = false;
 		boolean mesCorrecto = comprobarMes(mes);
-		
+		/*
+		 * Una vez que tenemos el dia, el mes y el año correcto
+		 * entra en el bucle y comprueba que el dia corresponda al mes
+		 * si es correcto imprime que la fecha es correcta
+		 * */
 		if (mesCorrecto) {
 			switch (mes) {
 			case 1,3,5,7,8,10,12 :
@@ -56,7 +70,9 @@ public class FechaV2 {
 		}
 		return diasCorrespondientes;
 	}
-	
+	/*
+	 * Compruebo que mes, dia y año sea correcto, si es asi entra en el bucle switch
+	*/
 	public static boolean comprobarMes(int mes) {
 		boolean mesCorrecto = false;
 		if (mes >=1 && mes <=12) {
@@ -82,7 +98,7 @@ public class FechaV2 {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println(comprobarFecha(12,12,2013));
+		System.out.println(comprobarFecha(20,8,2015)); //La fecha que vamos a comprobar
 
 	}
 
