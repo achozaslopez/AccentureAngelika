@@ -1,12 +1,16 @@
-package BuclesSaltos;
-
-public class NumerosALetrasV2 {
+package ej05.buclesysaltos;
+/**
+ * 
+ * @author Angelika Chozas López
+ *
+ */
+public class NumerosALetras {
 	private static String[] num1 = {"Uno", "Dos", "Tres", "Cuatro", "Cinco", "Seis", "Siete",
-			 	     				"Ocho", "Nueve"};
+									"Ocho", "Nueve"};
 	private static String[] num2 = {"Diez", "Veinte", "Treinta", "Cuarenta", "Cincuenta", 
-			 		 				"Sesenta", "Setenta", "Ochenta", "Noventa"};
+									"Sesenta", "Setenta", "Ochenta", "Noventa"};
 	private static String[] num3 = {"Once", "Doce", "Trece", "Catorce", "Quince"};
-	
+
 	private static String numberToString(int n, int unidades, int decenas) {
 		String mensaje = "";
 		mensaje = (num2[decenas - 1]).toLowerCase();
@@ -19,7 +23,7 @@ public class NumerosALetrasV2 {
 		if (decenas == 2 && n!=20) {
 			mensaje = ("Veinti" + num1[unidades - 1]).toLowerCase();
 		}
-		return mensaje;	
+		return mensaje;
 	}
 
 	public static void main(String[] args) {
@@ -27,7 +31,7 @@ public class NumerosALetrasV2 {
 		int unidades = n % 10;
 		int decenas = n / 10;
 		String mensaje = "";
-		
+	
 		if (n > 0) {
 			if(n < 10) {
 				mensaje = (num1[n - 1]).toLowerCase();

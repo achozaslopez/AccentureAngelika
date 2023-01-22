@@ -3,7 +3,7 @@ package BuclesSaltos;
 public class NumerosALetras {
 
 	public static void main(String[] args) {
-		int n = 72;
+		int n = 10;
 		int unidades = n % 10; //Resto division
 		int decenas = n / 10; //Cociente division
 		

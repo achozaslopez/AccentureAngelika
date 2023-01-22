@@ -11,8 +11,6 @@ public class FechaV2 {
 	 * @return 
 	 */
 	
-	
-	
 	public static String comprobarFecha(int dia, int mes, int anio) {
 		/**
 		 * Debido a un error en el Sonar de complejidad ciclomatica he creado diferentes

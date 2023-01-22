@@ -7,7 +7,7 @@ public class FechaV4 {
 		int mes = 8;
 		int año = 2015;
 		
-		int diasMes[] = {31, 28, 31, 30, 31, 31, 30, 31, 30, 31};
+		int diasMes[] = {31, 28, 31, 30, 31, 31, 30, 31, 30, 31, 30, 31};
 		
 		if(mes >= 1 && mes <=12) {
 			if(año != 0) {
