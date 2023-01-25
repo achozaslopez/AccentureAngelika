@@ -5,16 +5,13 @@ package ejercicio02;
  *
  */
 public class Ejercicio2 {
+	final static double IVA = 0.21; //Constante IVA
 	
 	public static void main(String[] args) {
-		
-		calcularIVA(precio);
-		System.out.println("El precio total del producto con el IVA incuido es de " + (calcularIVA(precio) + precio) + "€");//Imprimo por consola el resultado de calcular el iva más el precio
+		double importe = 50; //Variable importe
+		System.out.println("El precio total del producto con el IVA incuido es de " + (calcularIVA(importe) + importe) + "€");//Imprimo por consola el resultado de calcular el iva más el precio
 
 	}
-	
-	public static double precio = 50; //Variable precio
-	final static double IVA = 0.21; //Constante IVA
 	/**
 	 * Método que calcula el IVA del precio indicado
 	 * @param double precio
