@@ -13,11 +13,10 @@ public class Main {
 		cuenta1 = new Cuenta("123456789","Angelika Chozas");
 		cuenta1.ingresar(9000.50);
 		cuenta1.ingresar("Ahorros", 3000);
-		cuenta1.retirar(120.50);
+		cuenta1.retirar(12.50);
 		cuenta1.retirar("Cafetera", 380);
 		
 		tarjeta1 = new Tarjeta("2345234523452345","Angelika Chozas",LocalDate.of(2030, 10, 30));
-		
 		
 		debito1 = new Debito("2345234523452345","Angelika Chozas",LocalDate.of(2030, 10, 30));
 		debito1.setCuenta(cuenta1);
@@ -30,12 +29,20 @@ public class Main {
 		credito1.retirar(25);
 		
 		movimiento1 = new Movimiento();
-		//cuenta1 = verMovimientos();
+		cuenta1 = verMovimientos();
 		
 		
 		
 		
 
+	}
+
+	private static Cuenta verMovimientos() {
+		System.out.println(cuenta1);
+		System.out.println(tarjeta1);
+		System.out.println(debito1);
+		System.out.println(credito1);
+		return null;
 	}
 
 }

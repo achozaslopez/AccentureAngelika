@@ -33,4 +33,12 @@ public class Movimiento {
 	public void setImporte(double newMImporte) {
 		
 	}
+
+	@Override
+	public String toString() {
+		return "Movimiento [mConcepto=" + mConcepto + ", mFecha=" + mFecha + ", mImporte=" + mImporte
+				+ ", getConcepto()=" + getConcepto() + ", getFecha()=" + getFecha() + ", getImporte()=" + getImporte()
+				+ "]";
+	}
+	
 }

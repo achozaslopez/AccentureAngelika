@@ -46,9 +46,7 @@ import java.time.LocalDate;
 		fechaCaducidad = LocalDate.from(fechaCaducidad); 
 	}
 	
-	//public double getSaldo() {
-		//return Cuenta.getSaldo();
-	//}
+
 	
 	public void ingresar(double x) throws Exception {
 		
@@ -65,4 +63,13 @@ import java.time.LocalDate;
 	public void setCuenta(Cuenta c) {
 		mCuentaAsociada = c;
 	}
+
+	@Override
+	public String toString() {
+		return "Tarjeta [mCuentaAsociada=" + mCuentaAsociada + ", mFechaDeCaducidad=" + mFechaDeCaducidad + ", mNumero="
+				+ mNumero + ", mTitular=" + mTitular + ", getmCuentaAsociada()=" + getmCuentaAsociada()
+				+ ", getmFechaDeCaducidad()=" + getmFechaDeCaducidad() + ", getmNumero()=" + getmNumero()
+				+ ", getmTitular()=" + getmTitular() +  "]";
+	}
+	
 }

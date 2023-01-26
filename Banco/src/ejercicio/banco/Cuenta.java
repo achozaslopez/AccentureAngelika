@@ -1,24 +1,26 @@
 package ejercicio.banco;
 
-import java.util.Vector;
+import java.util.ArrayList;
+
 
 public class Cuenta {
 	final int TITULAR_MAX = 40;
 	final int TITULAR_MIN = 15;
 	private String mNumero;
 	private String mTitular;
-	private Vector<Movimiento> mMovimientos;
+	private ArrayList<Movimiento> mMovimientos;
 	
 	public Cuenta(String numero, String titular) throws Exception {
-		if(Filtros.cumpleLongitud(mTitular, TITULAR_MAX, TITULAR_MIN)) {
+		//if(Filtros.cumpleLongitud(mTitular, TITULAR_MAX, TITULAR_MIN)) {
 			this.mNumero = numero;
 			mTitular = titular;
-			mMovimientos = new Vector<Movimiento>();
-		}else {
-			throw new Exception("Error en el tamaño del titular");
-		}
+			mMovimientos = new ArrayList<Movimiento>();
+		//}else {
+		//	throw new Exception("Error en el tamaño del titular");
+		//}
 		
 	}
+	
 	
 	public String getmNumero() {
 		return mNumero;
@@ -36,11 +38,11 @@ public class Cuenta {
 		this.mTitular = getmTitular();
 	}
 
-	public Vector<Movimiento> getmMovimientos() {
+	public ArrayList<Movimiento> getmMovimientos() {
 		return mMovimientos;
 	}
 
-	public void setmMovimientos(Vector<Movimiento> mMovimientos) {
+	public void setmMovimientos(ArrayList<Movimiento> mMovimientos) {
 		this.mMovimientos = mMovimientos;
 	}
 	
@@ -53,7 +55,7 @@ public class Cuenta {
 	}
 	
 	public double getSaldo() {
-		double saldo = 0.0;
+		double saldo = 2000;
 		for (Movimiento m : mMovimientos) {
 			saldo += m.getImporte();
 		}
@@ -91,7 +93,18 @@ public class Cuenta {
 		
 		addMovimiento(concepto, -x);
 	}
+	
+	
+	@Override
+	public String toString() {
+		return "Cuenta [TITULAR_MAX=" + TITULAR_MAX + ", TITULAR_MIN=" + TITULAR_MIN + ", mNumero=" + mNumero
+				+ ", mTitular=" + mTitular + ", mMovimientos=" + mMovimientos + ", getmNumero()=" + getmNumero()
+				+ ", getmTitular()=" + getmTitular() + ", getmMovimientos()=" + getmMovimientos() + ", getSaldo()="
+				+ getSaldo() + "]";
+	}
+
+
 	//public void verMovimientos(){
-		//ListarMovimmientos.print("Listado Movimientos");
+		//ListarMovimientos.print("Listado Movimientos");
 	//}
 }

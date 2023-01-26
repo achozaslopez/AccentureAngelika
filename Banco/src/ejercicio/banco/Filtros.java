@@ -3,7 +3,7 @@ package ejercicio.banco;
 import java.time.LocalDate;
 
 public class Filtros {
-	
+	/*
 	public static boolean lMax(String texto, int longitud) {
 		return texto.length()<= longitud;
 	}
@@ -17,7 +17,7 @@ public class Filtros {
 	 * @param maxLongitud
 	 * @param minLongitud
 	 * @return
-	 */
+	 
 	public static boolean cumpleLongitud(String texto, int maxLongitud, int minLongitud) {
 		return lMax(texto, maxLongitud) && lMin(texto,minLongitud);
 	}
@@ -36,4 +36,5 @@ public class Filtros {
 		LocalDate minFech = hoy.plusYears(minAny);
 		return false;
 	}
+	*/
 }
