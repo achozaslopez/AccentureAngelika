@@ -1,18 +1,10 @@
 package ejercicio05;
 
-public interface CocheCRUD{
+interface CocheCRUD{
 
-	static String save() {
-		return "save()";
-	}
+	public void save();
 	
-	static String findAll() {
-		return "findAll()";
-	}
+	public void findAll();
 	
-	static String delete() {
-		return "delete()";	
-	}
-	
-
+	public void delete();
 }
