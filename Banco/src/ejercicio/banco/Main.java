@@ -31,10 +31,6 @@ public class Main {
 		movimiento1 = new Movimiento();
 		cuenta1 = verMovimientos();
 		
-		
-		
-		
-
 	}
 
 	private static Cuenta verMovimientos() {
