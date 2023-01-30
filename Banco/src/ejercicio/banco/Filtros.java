@@ -80,5 +80,4 @@ Boolean seCumple= false;
 		LocalDate minFech = hoy.plusYears(minAny);
 		return fMax(fecha,maxFech) && fMin(fecha,minFech);
 	}
-	
 }
