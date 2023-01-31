@@ -26,6 +26,7 @@ public class LeerConBuffered {
 			String texto;
 			while((texto = br.readLine()) != null) {
 				System.out.println(texto);
+				br.close();
 			}
 		}catch(IOException e) {
 			System.out.println("Error al leer el archivo");
