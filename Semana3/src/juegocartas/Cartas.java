@@ -3,6 +3,7 @@ package juegocartas;
 public class Cartas {
     int numero;
     String palo;
+    
 	public int getNumero() {
 		return numero;
 	}
@@ -15,6 +16,7 @@ public class Cartas {
 	public void setPalo(String palo) {
 		this.palo = palo;
 	}
+	
 	@Override
 	public String toString() {
 		return "Cartas [numero=" + numero + ", palo=" + palo + ", getNumero()=" + getNumero() + ", getPalo()="

@@ -1,20 +1,33 @@
 package juegocartas;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class Baraja {
-	
-	static final String[] PALOS = {"espadas", "copas", "oros", "bastos"};
-	
-	private Set<Cartas> baraja = new HashSet<>();
-	
-	public Baraja(String tipo) {
-		String[] palo = PALOS;
-		for(String paloCarta : palo) {
-			for(int i = 1; i < 13; i++) {
-				Cartas cBaraja = new Cartas();
-			}
-		}
+	  ArrayList<String> baraja = new ArrayList<String>();
+
+	  public Baraja() {
+	    String[] valores = {"As", "Dos", "Tres", "Cuatro", "Cinco", "Seis", "Siete", "Ocho", "Nueve", "Diez", "J", "Q", "K"};
+	    String[] palos = {"Diamantes", "Picas", "Trebol", "Corazones"};
+
+
+	    for (int i = 0; i < palos.length; i++) {
+	      for (int j = 0; j < valores.length; j++) {
+	        baraja.add(valores[j] + " de " + palos[i]);
+	      }
+	    }
+	    System.out.println("Ordenada " + baraja);
+	    System.out.println("Total cartas " + baraja.size());
+	  }
+
+	  public void barajar() {
+		  Collections.shuffle(baraja);
+		  System.out.println("Barajada " + baraja);
+	  }
+	  
+	  public void repartir() {
+		  
+	  }
+
+	  
 	}
-}
