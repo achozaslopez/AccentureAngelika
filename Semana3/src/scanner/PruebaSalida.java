@@ -14,7 +14,7 @@ public class PruebaSalida {
 		String apellido1 = sc.nextLine();
 		
 		try(FileWriter fw = new FileWriter("datos.txt")){
-			fw.write(nombre + " " + apellido1);
+			fw.write("Nombre=" + nombre + " " + "Apellido=" + apellido1);
 			System.out.println("Datos guardados en el archivo datos.txt");
 		}catch(IOException e) {
 			System.out.println("Error al guardar los datos en el archivo datos.txt");
