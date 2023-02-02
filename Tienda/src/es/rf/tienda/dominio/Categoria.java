@@ -6,8 +6,8 @@ import es.rf.tienda.util.Validator;
  * 
  * Nombre		Categoria
  * Descripcion	Lista de categorías
- * @author 		Miguel Garcia
- * @version		13 de abr. de 2016
+ * @author 		Angelika Chozas
+ * @version		02/02/2023
  *
  */
 public class Categoria {
