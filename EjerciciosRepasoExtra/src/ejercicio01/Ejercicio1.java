@@ -26,8 +26,6 @@ public class Ejercicio1 {
 		System.out.println("Número Decimal: " + numDecimal);
 		System.out.println("El valor del booleano es " + verdadero);
 		System.out.println("Cadena de texto: " + cadena);
-		
-
 	}
 
 }
