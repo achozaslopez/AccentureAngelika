@@ -4,11 +4,12 @@ import java.sql.SQLException;
 import java.util.List;
 
 import ficheros.dao.CountryDao;
+import ficheros.dao.CountryDaoI;
 import ficheros.modelos.Country;
 
 public class CountryController {
 	
-	CountryDao cDao;
+	CountryDaoI cDao;
 
 	public CountryController() throws SQLException{
 		cDao = new CountryDao();
